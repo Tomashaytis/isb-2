@@ -68,6 +68,7 @@ void to_binary(string filename, int* key, size_t length)
 				s = s + static_cast<char>(x % 2 + '0');
 				x = x / 2;
 			}
+			reverse(s.begin(), s.end());
 			out << s;
 		}
 	}
