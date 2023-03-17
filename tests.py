@@ -3,6 +3,12 @@ from scipy.special import gammainc
 
 
 def frequency_bit_test(subsequence: str) -> float:
+    """
+    The function performs the frequency bit test for a subsequence of bits.
+
+    :param subsequence: subsequence of bits.
+    :return: P_value.
+    """
     n = len(subsequence)
     s_n = 0
     for i in subsequence:
@@ -12,6 +18,12 @@ def frequency_bit_test(subsequence: str) -> float:
 
 
 def identical_consecutive_bit_test(subsequence: str) -> float:
+    """
+    The function performs the test for identical consecutive bits for a subsequence of bits.
+
+    :param subsequence: subsequence of bits.
+    :return: P_value.
+    """
     n = len(subsequence)
     s = 0
     for i in subsequence:
@@ -28,6 +40,12 @@ def identical_consecutive_bit_test(subsequence: str) -> float:
 
 
 def longest_sequence_of_ones_test(subsequence: str) -> float:
+    """
+    The function performs the test for the longest sequence of ones in a unit for a subsequence of bits.
+
+    :param subsequence: subsequence of bits.
+    :return: P_value.
+    """
     n = len(subsequence)
     units = [0] * (n // 8)
     for i in range(len(units)):
@@ -59,5 +77,7 @@ if __name__ == '__main__':
     print(f'Тест на одинаковые подряд идущие биты: {identical_consecutive_bit_test(bit_row)}')
     print(f'Тест на самую длинную последовательность единиц в блоке: {longest_sequence_of_ones_test(bit_row)}')
 
+# subsequences:
 # 11001001111101110011001000000100110110001110011010000011011011101110010011101011011100011000010110010010101000111110110010001010
 # 11001101011110101010010110100101011100001110100001000011110110110110110101010000010010011001110111000001100010110100011001000111
+# 10010110000110111001111111011001010111000110111011001111001010011110001010010000010100000111001011100110001111110010101010100111
